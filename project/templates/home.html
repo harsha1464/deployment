@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diabetes Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+<div class="card">
+    <h1>Diabetes Prediction</h1>
+
+    <form method="POST" action="/submit" id="predictForm">
+        <input type="number" name="preg" placeholder="Pregnancies" value="{{ values.preg if values }}">
+        <input type="number" name="plas" placeholder="Glucose" value="{{ values.plas if values }}">
+        <input type="number" name="pres" placeholder="Blood Pressure" value="{{ values.pres if values }}">
+        <input type="number" name="skin" placeholder="Skin Thickness" value="{{ values.skin if values }}">
+        <input type="number" name="test" placeholder="Insulin" value="{{ values.test if values }}">
+        <input type="number" name="mass" placeholder="BMI" step="any" value="{{ values.mass if values }}">
+        <input type="number" name="pedi" placeholder="Pedigree Function" step="any" value="{{ values.pedi if values }}">
+        <input type="number" name="age" placeholder="Age" value="{{ values.age if values }}">
+
+        <button type="submit">Predict</button>
+        <button type="button" onclick="clearForm()">Clear</button>
+    </form>
+
+    {% if result %}
+        <div class="result">{{ result }}</div>
+    {% endif %}
+</div>
+
+<script>
+function clearForm() {
+    document.getElementById("predictForm").reset();
+    window.location.href = "/";
+}
+</script>
+</body>
+</html>

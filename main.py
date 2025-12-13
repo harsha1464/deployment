@@ -39,7 +39,7 @@ print("Accuracy:", acc)
 # ---------------------------
 # Save the model using joblib
 # ---------------------------
-joblib.dump(model, "diabetes_model.pkl")
+joblib.dump(model, "project/diabetes_model.pkl")
 
 print("Model saved as diabetes_model.pkl")
 
