@@ -1,0 +1,27 @@
+# Ignore virtual environment
+.venv/
+venv/
+
+# Ignore PyCharm settings
+.idea/
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore model checkpoints (except the one you want)
+*.pkl
+!diabetes_model.pkl   # allow only this file
+
+# Ignore logs
+*.log
+
+# Ignore temporary files
+*.tmp
+*.swp
