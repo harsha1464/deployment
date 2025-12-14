@@ -15,9 +15,6 @@ __pycache__/
 .DS_Store
 Thumbs.db
 
-# Ignore model checkpoints (except the one you want)
-*.pkl
-!diabetes_model.pkl   # allow only this file
 
 # Ignore logs
 *.log
